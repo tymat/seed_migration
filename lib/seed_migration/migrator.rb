@@ -106,8 +106,6 @@ module SeedMigration
     end
 
     def self.bootstrap(last_timestamp = nil)
-      # replace with logger ?
-      p "Assume migrated up to #{last_timestamp}"
       files = get_migration_files(last_timestamp.to_s)
       files.each do |file|
         name = file.split('/').last
